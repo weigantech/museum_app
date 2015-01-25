@@ -1,0 +1,282 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <style>
+        #main{
+            padding: 0.25em;
+            background-color: #fff;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-flex-flow: column;
+            flex-flow: column;
+        }
+       
+        /*new*/
+        .zhuti-menu{
+            background:url(../image/zhuti/top_banner.png) no-repeat 0 0;
+            background-size:100% 100%;
+        }
+        .zhuti-menu-item{
+            width:25%;
+            float:left;
+        }
+        .zhuti-menu-item img{
+            width:60%;
+            margin:auto;
+        }
+        .zhuti-content-list li{
+            display:block;
+            
+        }
+        .zhuti-item{
+            position:relative;
+            width:50%;
+            margin: 10px 0 0;
+        }
+         .zhuti-item-left{
+            float:left;
+        }
+        .zhuti-item-right{
+            float:right;
+        }
+        .zhuti-item img{
+            width:90%;
+            margin:0 auto;
+        }
+        .zhuti-item span{
+            display:block;
+        }
+        .zhuti-item-juli{
+            position:absolute;
+            top:5%;
+            right:7%;
+            color:#fff;
+        }
+        .zhuti-item-name{
+            position:absolute;
+            bottom:5%;
+            color:#fff;
+            font-weight:bold;
+            width:100%;
+            text-align:center;
+        }
+    </style>
+</head>
+<body ontouchstart="">
+    <div id="wrap">
+        <div id="main">
+
+            	<div class="zhuti-menu">
+                     <div id="zhou" class="zhuti-menu-item" tapmode onclick="activate(this);"><img src="../image/zhuti/zhou1.png"></div>
+                     <div id="qin" class="zhuti-menu-item" tapmode onclick="activate(this);"><img src="../image/zhuti/qin1.png"></div>
+                     <div id="han" class="zhuti-menu-item" tapmode onclick="activate(this);"><img src="../image/zhuti/han1.png"></div>
+                     <div id="tang" class="zhuti-menu-item" tapmode onclick="activate(this);"><img src="../image/zhuti/tang1.png"></div>
+                     <div style="clear:both;"></div>
+                </div>
+                <ul id="content-list" class="zhuti-content-list">
+                	<li>
+                	    <div class="zhuti-item zhuti-item-left"  tapmode data-frameName="frm_museum_info" data-id="1" data-title="陕西历史博物馆" data-imageUrl="../image/zhuti/shanbo.png" data-winName="win_museum_index" onclick="toMuseumIndex(this)">
+                	        <img src="../image/zhuti/shanbo.png"/>
+                	        <span class="zhuti-item-juli">9km</span>
+                	        <span class="zhuti-item-name">陕西历史博物馆</span>
+                	    </div>
+                	    <div class="zhuti-item zhuti-item-right">
+                	        <img src="../image/zhuti/xabwy.jpg"/>
+                	        <span class="zhuti-item-juli">5.1km</span>
+                	        <span class="zhuti-item-name">西安博物院</span>
+                	    </div>
+                	    <div style="clear:both;"></div>
+                	</li>
+                	<li>
+                	    <div class="zhuti-item zhuti-item-left">
+                	        <img src="../image/zhuti/blbwg.jpg"/>
+                	        <span class="zhuti-item-juli">11km</span>
+                	        <span class="zhuti-item-name">碑林博物馆</span>
+                	    </div>
+                	    <div class="zhuti-item zhuti-item-right">
+                	        <img src="../image/zhuti/qlbwg.jpg"/>
+                	        <span class="zhuti-item-juli">69km</span>
+                	        <span class="zhuti-item-name">秦陵博物院</span>
+                	    </div>
+                	    <div style="clear:both;"></div>
+                	</li>
+                	<li>
+                	    <div class="zhuti-item zhuti-item-left">
+                	        <img src="../image/zhuti/mlbwg.jpg"/>
+                	        <span class="zhuti-item-juli">9km</span>
+                	        <span class="zhuti-item-name">茂陵博物馆</span>
+                	    </div>
+                	    <div class="zhuti-item zhuti-item-right">
+                	        <img src="../image/zhuti/bpbwg.jpg"/>
+                	        <span class="zhuti-item-juli">12.3km</span>
+                	        <span class="zhuti-item-name">半坡博物馆</span>
+                	    </div>
+                	    <div style="clear:both;"></div>
+                	</li>
+                	<li>
+                	    <div class="zhuti-item zhuti-item-left"  tapmode data-frameName="frm_museum_info" data-id="1" data-title="陕西历史博物馆" data-imageUrl="../image/zhuti/shanbo.png" data-winName="win_museum_index" onclick="toMuseumIndex(this)">
+                	        <img src="../image/zhuti/shanbo.png"/>
+                	        <span class="zhuti-item-juli">9km</span>
+                	        <span class="zhuti-item-name">陕西历史博物馆</span>
+                	    </div>
+                	    <div class="zhuti-item zhuti-item-right">
+                	        <img src="../image/zhuti/xabwy.jpg"/>
+                	        <span class="zhuti-item-juli">5.1km</span>
+                	        <span class="zhuti-item-name">西安博物院</span>
+                	    </div>
+                	    <div style="clear:both;"></div>
+                	</li>
+                	<li>
+                	    <div class="zhuti-item zhuti-item-left">
+                	        <img src="../image/zhuti/blbwg.jpg"/>
+                	        <span class="zhuti-item-juli">11km</span>
+                	        <span class="zhuti-item-name">碑林博物馆</span>
+                	    </div>
+                	    <div class="zhuti-item zhuti-item-right">
+                	        <img src="../image/zhuti/qlbwg.jpg"/>
+                	        <span class="zhuti-item-juli">69km</span>
+                	        <span class="zhuti-item-name">秦陵博物院</span>
+                	    </div>
+                	    <div style="clear:both;"></div>
+                	</li>
+                	<li>
+                	    <div class="zhuti-item zhuti-item-left">
+                	        <img src="../image/zhuti/mlbwg.jpg"/>
+                	        <span class="zhuti-item-juli">79km</span>
+                	        <span class="zhuti-item-name">茂陵博物馆</span>
+                	    </div>
+                	    <div class="zhuti-item zhuti-item-right">
+                	        <img src="../image/zhuti/bpbwg.jpg"/>
+                	        <span class="zhuti-item-juli">12.3km</span>
+                	        <span class="zhuti-item-name">半坡博物馆</span>
+                	    </div>
+                	     <div style="height:170px;"> </div>
+                	</li>
+                	<div style="clear:both;"></div>
+                </ul>
+                <p>&nbsp;</p>
+        </div>
+        
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/common.js"></script>
+<script type="text/javascript" src="../script/swipe.js"></script>
+<script type="text/javascript" src="../script/doT.min.js"></script>
+<script type="text/javascript" src="../script/zepto.js"></script>
+
+<script type="text/javascript">
+	
+	
+	
+	function activate(obj)
+	{
+		//alert( preObj.attr('id'));
+		if (  pre.attr('id') == "undefined")
+			reuturn;
+		else if ( pre.attr('id') == 'zhou')
+		{
+			$("#zhou").html('<img src="../image/zhuti/zhou1.png"/>');
+		}
+		else if ( pre.attr('id') == 'qin')
+		{
+			$("#qin").html('<img src="../image/zhuti/qin1.png"/>');
+		}
+		else if ( pre.attr('id') == 'tang')
+		{
+			$("#tang").html('<img src="../image/zhuti/tang1.png"/>');
+		}
+		else if ( pre.attr('id') == 'han')
+		{
+			$("#han").html('<img src="../image/zhuti/han1.png"/>');
+		}
+		
+		if ( $(obj).attr('id') == 'zhou')
+		{
+			$("#zhou").html('<img src="../image/zhuti/zhou2.png"/>');
+		}
+		else if ( $(obj).attr('id') == 'qin')
+		{
+			$("#qin").html('<img src="../image/zhuti/qin2.png"/>');
+		}
+		else if ( $(obj).attr('id') == 'tang')
+		{
+			$("#tang").html('<img src="../image/zhuti/tang2.png"/>');
+		}
+		else if ( $(obj).attr('id') == 'han')
+		{
+			$("#han").html('<img src="../image/zhuti/han2.png"/>');
+		}
+		
+		//$(obj).css("background", "url(../image/zhuti/qin2.png) top center no-repeat;background-size: 60%;" );
+		//alert($(obj).);
+		
+		window.pre = $(obj);
+	}
+</script>
+<!--
+<script id="museum_item_tmpl" type="text/x-dot-template">
+		<li class="museum_item" tapmode data-frameName="frm_museum_info" data-id="{{=it.id}}" data-title="{{=it.name}}" data-imageUrl="{{=it.image_url}}" data-winName="win_museum_index" onclick="toMuseumIndex(this)">
+			<h3>{{=it.name}}</h3>
+			<span>{{=it.distance}}</span>
+			<img src="{{=it.image_url}}"/>
+		</li>
+</script>
+-->
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/common.js"></script>
+<script type="text/javascript" src="../script/swipe.js"></script>
+<script type="text/javascript" src="../script/zepto.js"></script>
+<script type="text/javascript" src="../script/doT.min.js"></script>
+<script type="text/javascript">
+//		var def = {
+//			header: document.getElementById('headertmpl').text,
+//			customheader: document.getElementById('customizableheadertmpl').text
+//		};
+		var data = [{
+			distance: "13.3km",
+			name: "陕西历史博物馆",
+			image_url: "../image/museum/6.png"
+		},
+		{
+			distance: "15km",
+			name: "陕西民俗博物馆",
+			image_url: "../image/museum/8.png"
+		}
+		];
+		
+		$(function()
+		{
+			
+			window.pre = $('#zhou');
+			
+			
+			//get data from server
+			/*$.getJSON( config["serverUrl"] + "/list/1", function(res){
+			
+			var errcode = res["errcode"];
+			
+			if ( errcode == 0)
+			{
+				var data = res["data"];
+				for (var i = 0; i < data.length; i++)
+				{
+						var pagefn = doT.template(document.getElementById('museum_item_tmpl').text, undefined, undefined);
+						$('#content-list').append( pagefn(data[i]));
+						//$('#content-list').append(data[i].image_url);
+				}
+			}
+			else
+				alert("错误码：" + errcode);
+			});*/
+		});
+
+	</script>
+</html>

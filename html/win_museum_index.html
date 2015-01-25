@@ -1,0 +1,307 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <style>
+        
+        #header{
+        	height:55px;
+            background-color: #FCFCFC;
+            background: url("../image/head2.png") no-repeat;
+            background-size: 100% 100%;
+            z-index:99;
+        } 
+        #top
+        {
+        	width:100%;
+        	height:222px;
+        	position:relative;
+        	margin-top:-10px;
+        	z-index:10;
+        }
+        #tab 
+        {
+        	margin-top:2px;
+        	height:30px;
+        	width: 100%;
+        	background: url("../image/museum/nav_tab.png") top center no-repeat;
+        	background-size: 95% 100%;
+        }
+        #main
+        {
+        	width:100%;
+        }
+        .btn-box{
+            width: 15%;
+            height: 48px;
+        }
+        .btn-back{
+            /*width: 20%;*/
+            /*height:40px;
+            margin-left: 1em;*/
+            background: url(../image/back.png) center center no-repeat;
+            background-size: 50%;
+            padding-top: 0;
+        }
+    
+    	.btn-more
+    	{
+    		background: url(../image/more.png) center center no-repeat;
+            background-size: 50%;
+            padding-top: 0;
+    	}
+        #header .title{
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            flex: 1;
+            font-size: 1.1em;
+            color: white;
+            line-height: 48px;
+            text-align: center;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            width:70%;
+        }
+        .menu_item
+        {
+        	width:20%;
+        	height:100%;
+        	/*float:left;*/
+        }
+        #iteract
+        {
+        	position:absolute;
+        	right:10px;
+        	bottom:40px;
+        }
+        #iteract  a{
+        	width:60px;
+        	height:30px;
+        }
+        #iteract .collect
+        {
+        	background:url("../image/museum/collect.png") left center no-repeat;
+        	background-size:50%;
+        }
+        #iteract .favour 
+        {
+        	background:url("../image/museum/favour.png") left center no-repeat;
+        	background-size:50%;
+        }
+        #iteract span
+        {
+        	text-align:center;
+        	line-height: 200%;
+        	float:right;
+        }
+    </style>
+</head>
+<body ontouchstart="">
+    <div id="wrap">
+    	<div id="header">
+            <div class="header-content clearfix">
+                <div class="btn-box btn-back" tapmode onclick="backOrClose();"></div>
+                <h5 class="title"></h5>
+                <div class="btn-box btn-more" tapmode onclick=""></div>
+            </div>
+        </div>
+        <div id="top" data-id="" >
+        	<img src="" width="100%" height="200px"/>
+        	<div id="iteract">
+	        	<a tapmode class="collect" onclick=""> <span id="">230</span></a>
+	        	<a tapmode class="favour" onclick=""> <span id="">560</span></a>
+        	</div>
+        	<ul id="tab" class="display-box box-orient-h">
+        		<li class="menu_item" tapmode onclick="onMenuItem(this);"></li>
+        		<li class="menu_item" tapmode onclick="onMenuItem(this);"></li>
+        		<li class="menu_item" tapmode onclick="onMenuItem(this);"></li>
+        		<li class="menu_item" tapmode onclick="onMenuItem(this);"></li>
+        		<li class="menu_item" tapmode onclick="onMenuItem(this);"></li>
+        	</ul>
+        </div>
+        
+        <div id="main">
+        	
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/common.js"></script>
+<script type="text/javascript" src="../script/swipe.js"></script>
+<script type="text/javascript" src="../script/zepto.js"></script>
+<script type="text/javascript" src="../script/doT.min.js"></script>
+<script type="text/javascript">
+	function onMenuItem(obj)
+	{
+		i = $(obj).index() + 1;
+		openTab(i);
+	}
+	function openTab(i)
+	{
+		$("#tab").css("background", "url(../image/museum/nav_tab_" + i + ".png) top center no-repeat;background-size: 95% 100%;" );
+		window.index = i;
+		api.setFrameGroupIndex({
+		    name: 'group1',
+		    index: i,
+		    scroll:true
+			});
+	}
+	var backOrClose = function(){
+        // 在安卓上if(history.back())有问题，总是执行closeWin();
+        
+        if( window.index !== 0)
+        {
+        	openTab(0);
+        	return;
+        }
+        
+        // 在安卓上if(history.back())有问题，总是执行closeWin();
+        var str = 'if (history.back()) {history.go(-1);} else{if(api){api.closeWin();}}';
+
+        api.execScript({
+            frameName: 'introframe',
+            script: str
+        });
+
+//		alert('winClose();');
+//		api.winClose();
+    };
+    
+    var openFrameFn = function(){
+        //alert(curUrl + " h:" + mainPos.h);
+        api.openFrame({
+            name: 'introframe',
+            url: curUrl,
+            bounces: true,
+            pageParam: options,
+            rect: {
+                x: 0,
+                y: headerPos.h + topPos.h,
+                w: 'auto',
+                h: mainPos.h
+            }
+        });  
+    };
+    
+    var openFrameGroupFn = function ()
+    {
+    	api.openFrameGroup ({
+		    name: 'group1',
+		    background:'#fff',
+		    scrollEnabled:false,
+		    rect:{x:0, y:headerPos.h + topPos.h, w:'auto', h:mainPos.h},
+		    index:0,
+		    frames:
+		    [{
+		        name: 'introframe', 
+		        url: 'frm_museum_info.html', 
+		        pageParam: options, 
+		        bounces:true, 
+		        opaque:true,
+		        bgColor: '#fff', 
+		        vScrollBarEnabled:true,
+		        hScrollBarEnabled:false
+		    },{
+		        name: 'frame2', 
+		        url: 'frm_museum_ticket.html', 
+		        pageParam:options, 
+		        bounces:true, 
+		        opaque:true,
+		        bgColor: '#fff', 
+		        vScrollBarEnabled:true,
+		        hScrollBarEnabled:false
+		    },{
+		        name: 'frame3', 
+		        url: 'frm_museum_item.html', 
+		        pageParam:options, 
+		        bounces:true, 
+		        opaque:true,
+		        bgColor: '#fff', 
+		        vScrollBarEnabled:true,
+		        hScrollBarEnabled:false
+		    },{
+		        name: 'frame4', 
+		        url: 'frm_museum_exhibition.html', 
+		        pageParam:options, 
+		        bounces:true, 
+		        opaque:true,
+		        bgColor: '#fff', 
+		        vScrollBarEnabled:true,
+		        hScrollBarEnabled:false
+		    },{
+		        name: 'frame5', 
+		        url: 'frm_museum_activity.html', 
+		        pageParam:options, 
+		        bounces:true, 
+		        opaque:true,
+		        bgColor: '#fff', 
+		        vScrollBarEnabled:true,
+		        hScrollBarEnabled:false
+		    },{
+		        name: 'frame6', 
+		        url: 'frm_museum_comment.html', 
+		        pageParam:options, 
+		        bounces:true, 
+		        opaque:true,
+		        bgColor: '#fff', 
+		        vScrollBarEnabled:true,
+		        hScrollBarEnabled:false
+		    }]
+		}, function(ret, err){
+		    var name = ret.name;
+		    var index = ret.index;
+		    //alert('index:' + index);
+		});
+    }
+    apiready = function(){
+    	//alert('museum index visited!');
+    	
+    	var id = api.pageParam.id;
+        var title = api.pageParam.title;
+        var winName = api.pageParam.winName;
+        var frameName = api.pageParam.frameName;
+		var imageUrl = api.pageParam.imageUrl;
+		
+
+	    window.options = {
+	    		id: id,
+	            title: title,
+	            frameName: frameName,
+	            winName: winName,
+	            imageUrl: imageUrl
+	        };
+		//alert( imageUrl);
+		//$('#top').append(imageUrl);
+		$('#top img').attr('src', imageUrl);
+
+        var header = $api.byId('header');
+        $api.fixIos7Bar(header); 
+        window.headerPos = $api.offset(header);
+        
+        var top = $api.byId('top');
+        window.topPos = $api.offset(top);
+        
+        var main = $api.byId('main');
+        window.mainPos = $api.offset(main);
+        
+        window.curUrl = frameName + ".html";
+//      $.getJSON("http://192.168.0.104:8080/museum/"+ id+ "/info", function(data){
+//			
+//			for (var i = 0; i < data.length; i++)
+//			{
+//					var pagefn = doT.template(document.getElementById('museum_item_tmpl').text, undefined, undefined);
+//					$('#content-list').append( pagefn(data[i]));
+//					//$('#content-list').append(data[i].image_url);
+//			}
+//		});
+        $api.dom('#header .title').innerHTML = title;
+        openFrameGroupFn();
+        openTab(0);
+    };
+</script>
+</html>

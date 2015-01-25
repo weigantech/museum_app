@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <title>title</title>
+	    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+	    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+	    <style>
+	    	#wrapper
+	    	{
+	    		padding:8px 3px 5px 3px;
+	    	}
+	    	
+	    	.menu_item
+	    	{
+	    		border-bottom: 1px #eee solid;
+	    		color:#75C5F0;
+	    		font-size:1em;
+	    	}
+	    	.activity-item{
+	    	    padding-bottom:10px;
+	    	    position:relative;
+	    	    margin-top:10px;
+	    	}
+	    	.activity-img{
+	    	    float:left;
+	    	    width:30%;
+	    	    margin-left:2%;
+	    	    
+	    	}
+	    	.activity-item img{
+	    	    width:90%;
+	    	}
+	    	.activity-info{
+	    	    float:left;
+	    	    width:66%;
+	    	    margin-left:1%;
+	    	    
+	    	}
+	    	.activity-title{
+	    	    display:block;
+	    	    font-size:16px;
+	    	    color:#999;
+	    	}
+	    	.activity-time{
+	    	    display:block;
+	    	    color:#999;
+	    	    position:absolute;
+	    	    bottom:12px; 
+	    	}
+	    </style>
+	</head>
+	<body>
+		<div id="wrapper">
+		    <ul>
+        		<li class="menu_item" tapmode data-frameName="frm_activity" data-title="活动详情" data-winName="win_normal" onclick="toPage(this);">
+        		  <div class="activity-item">
+        		      <div class="activity-img">
+        		          <img src="../image/museum/activity-img1.jpg"/>
+        		      </div>
+        		      <div class="activity-info">
+        		          <span class="activity-title">我馆社招志愿者赴陕北参观学习</span>
+        		          <span class="activity-time">2014-04-04</span>
+        		      </div> 
+        		      <div style="clear:both"></div>    		      
+        		  </div>
+        		</li>
+        		<li class="menu_item" tapmode onclick="">
+        		  <div class="activity-item">
+        		      <div class="activity-img">
+        		          <img src="../image/museum/activity-img2.jpg"/>
+        		      </div>
+        		      <div class="activity-info">
+        		          <span class="activity-title">我馆举办中秋赏月吟诗会</span>
+        		          <span class="activity-time">2014-04-04</span>
+        		      </div> 
+        		      <div style="clear:both"></div>    		      
+        		  </div>
+        		</li>
+        		<li class="menu_item" tapmode onclick="">
+        		  <div class="activity-item">
+        		      <div class="activity-img">
+        		          <img src="../image/museum/activity-img3.jpg"/>
+        		      </div>
+        		      <div class="activity-info">
+        		          <span class="activity-title">我馆举办“汉字好好玩”教育活动</span>
+        		          <span class="activity-time">2014-04-04</span>
+        		      </div> 
+        		      <div style="clear:both"></div>    		      
+        		  </div>
+        		</li>
+        		<li class="menu_item" tapmode onclick="">
+        		  <div class="activity-item">
+        		      <div class="activity-img">
+        		          <img src="../image/museum/activity-img4.jpg"/>
+        		      </div>
+        		      <div class="activity-info">
+        		          <span class="activity-title">陕博“流动博物馆”走进延安大学</span>
+        		          <span class="activity-time">2014-04-04</span>
+        		      </div> 
+        		      <div style="clear:both"></div>    		      
+        		  </div>
+        		</li>
+        		<li class="menu_item" tapmode onclick="">
+        		  <div class="activity-item">
+        		      <div class="activity-img">
+        		          <img src="../image/museum/activity-img5.jpg"/>
+        		      </div>
+        		      <div class="activity-info">
+        		          <span class="activity-title">2012年陕博志愿者风采大赛复赛圆满结束</span>
+        		          <span class="activity-time">2014-04-04</span>
+        		      </div> 
+        		      <div style="clear:both"></div>    		      
+        		  </div>
+        		</li>
+        	</ul>
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="../script/api.js"></script>
+	<script type="text/javascript" src="../script/common.js"></script>
+	<script type="text/javascript" src="../script/zepto.js"></script>
+	<script type="text/javascript" src="../script/doT.min.js"></script>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <title>title</title>
+	    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+	    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+	    <style>
+	    	#wrapper
+	    	{
+	    		padding:8px 3px 5px 3px;
+	    	}
+	    	#intro
+	    	{
+	    		padding:3px 5px;
+	    		font-size: 1.2em;
+	    		line-height:150%;
+	    		margin-bottom:30px;
+	    	}
+	    	#intro p
+	    	{
+	    		
+	    	}
+	    	
+	    	.collapse
+	    	{
+	    		height:88px;
+	    		overflow:hidden;
+	    		text-overflow : ellipsis ;
+	    		
+				display: -webkit-box;
+				/*-webkit-line-clamp: 2;*/
+				-webkit-box-orient: vertical;
+	    	}
+	    	#extend
+	    	{
+	    		color:#75C5F0;
+	    		float:right;
+	    		margin-right:5px;
+	    	}
+	    	#detail-list li
+	    	{
+	    		height:40px;
+	    		border-top: 1px #D0D0D0 solid;
+	    		padding-left:13%;
+	    		color:#75C5F0;
+	    		line-height: 40px;
+	    		font-size:1em;
+	    	}
+	    	.telephone
+	    	{
+	    		background:url(../image/museum/telephone.png);
+	    		background-size: 100%;
+	    	}
+	    	.address
+	    	{
+	    		background:url(../image/museum/address.png);
+	    		background-size: 100%;
+	    	}
+	    	.route
+	    	{
+	    		background:url(../image/museum/route.png);
+	    		background-size: 100%;
+	    	}
+	    	.website
+	    	{
+	    		background:url(../image/museum/website.png);
+	    		background-size: 100%;
+	    	}
+	    	
+	    </style>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="intro">
+				<p class="collapse">
+					陕西历史博物馆，位于西安大雁塔的西北侧，是中国第一座大型现代化国家级博物馆，于1983年筹建，属国家“七五”计划重点建设项目，1991年6月20日落成正式对外开放。它的建成标志着中国博物馆事业迈入了新的发展里程。馆区馆藏文物多达 370000余件，上起远古人类初始阶段使用的简单石器，下至1840年前社会生活中的各类器物，时间跨度长达一百多万年，其中的商周青铜器精美绝伦，历代陶俑千姿百态，汉唐金银器独步全国，唐墓壁画举世无双。
+				</p>
+				<span id="extend" tapmode onclick="onExtend();">全文<span>
+				
+			</div>
+			<ul id="detail-list">
+				<li class="telephone">029-85253806</li>
+				<li class="address">西安市小寨东路91号</li>
+				<li class="route">乘车路线</li>
+				<li class="website"></li>
+			</ul>
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="../script/api.js"></script>
+	<script type="text/javascript" src="../script/common.js"></script>
+	<script type="text/javascript" src="../script/zepto.js"></script>
+	<script type="text/javascript" src="../script/doT.min.js"></script>
+	<script id="museum_intro_tmpl" type="text/x-dot-template">
+			<div id="intro">
+				<p class="collapse">
+					陕西历史博物馆，位于西安大雁塔的西北侧，是中国第一座大型现代化国家级博物馆，于1983年筹建，属国家“七五”计划重点建设项目，1991年6月20日落成正式对外开放。它的建成标志着中国博物馆事业迈入了新的发展里程。馆区馆藏文物多达 370000余件，上起远古人类初始阶段使用的简单石器，下至1840年前社会生活中的各类器物，时间跨度长达一百多万年，其中的商周青铜器精美绝伦，历代陶俑千姿百态，汉唐金银器独步全国，唐墓壁画举世无双。
+				</p>
+				<span id="extend" tapmode onclick="onExtend();">全文<span>
+				
+			</div>
+			<ul id="detail-list">
+				<li class="telephone">029-85253806</li>
+				<li class="address">西安市小寨东路91号</li>
+				<li class="route">乘车路线</li>
+				<li class="website">博物馆网站</li>
+			</ul>
+	</script>
+	<script type="text/javascript">
+	
+		function onExtend()
+		{
+			//alert("onExtend");
+			if ( $('#extend').text() == "全文") 
+			{
+				$('#intro p').removeClass('collapse');
+				$('#extend').text('收起');
+			}
+			else
+			{
+				$('#intro p').addClass('collapse');
+				$('#extend').text('全文');
+			}
+		
+		}
+		apiready = function(){
+			
+			//var id = api.pageParam.id;
+			//var url = config["serverUrl"] + "/museum/" + id + "/info";
+			//$.getJSON( url, function(res){
+			//	var errcode = res["errcode"];
+				
+			//	if ( errcode == 0)
+			//	{		
+			//		var data = res["data"];
+			//		var pagefn = doT.template(document.getElementById('museum_intro_tmpl').text, undefined, undefined);
+			//		$('#wrapper').append( pagefn( data));
+			//	}
+			//});
+		};
+	</script>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <title>title</title>
+	    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+	    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+	    <style>
+	    	#wrapper
+	    	{
+	    		padding:0 3px;
+	    	}    	
+	    	.comments_item
+	    	{
+	    		border-bottom: 1px #D0D0D0 solid;
+	    		color:#75C5F0;
+	    		font-size:1em;
+	    		width:100%;
+	    		height:auto;
+	    	}
+	    	.comments-rank{
+	    	    padding:10px 10px 10px 5px;
+	    	    background-color:#f7f7f7;
+	    	}
+	    	.comments-rank .activity{
+	    	    background-color:#f3f3f3;
+	    	}
+	    	
+	    	.rank
+	    	{
+	    	    display:inline-block;
+	    	    border:solid 1px #eee;
+	    	    border-radius:4px;
+	    	    padding:5px;
+	    	    background-color:#fff;
+	    	    font-weight:bold;
+	    	    font-size:14px;
+	    	}
+	    	.comments_item{
+	    	    padding: 10px 5px;
+	    	    border-bottom:solid 1px #f3f3f3;
+	    	}
+	    	.comments-tag{
+	    	    margin: 0 0 10px;
+	    	}
+	    	.comments-tag span{
+	    	    display:inline-block;
+	    	    color:#aaa;
+	    	    font-size:14px;
+	    	    
+	    	}
+	    	.comments-time{
+	    	    margin-left:15px;
+	    	}
+	    	.comments-star-rank{
+	    	    float:right;
+	    	    margin-right:10px;
+	    	}
+	    	.comments-star-rank img{
+	    	    height:14px;
+	    	}
+	    	.comments-button img{
+	    	    width:100%;
+	    	}
+	    	.comments-img{
+	    	   padding-top:13px;
+	    	   margin-top:10px;
+	    	   border-top:solid 1px #f6f6f6;
+	    	}
+	    	.comments-img span{
+	    	    display:inline-block;
+	    	    width:18%;
+	    	    margin-left:1%
+	    	}
+	    	.comments-img .comments-img-first{
+	    	    margin-left:0;
+	    	}
+	    	.comments-img img{
+	    	    width:100%;
+	    	}
+	    </style>
+	</head>
+	<body>
+		<div id="wrapper">
+		    <div class="comments comments-rank">
+		        <span class="rank rank-all activity">全部 (20)</span>
+		        <span class="rank rank-good">好评 (18)</span>
+		        <span class="rank rank-common">中评 (2)</span>
+		        <span class="rank rank-negative">差评 (0)</span>
+		    </div>
+		    <div class="comments comments-details">
+		        <ul>
+        		    <li class="comments_item" tapmode onclick="">
+        		        <div class="comments-tag">
+        		            <span class="comments-user">暖色年华</span>
+        		            <span class="comments-time">2014-12-26 15:14</span>
+        		            <span class="comments-star-rank"><img src="../image/museum/rank_star.png"/></span>
+        		        </div>
+        		        <div class="comments-content">
+        		            <p>博物馆不错，但要请个导游带着才好，不然好多东西看不懂瞎转，好多宝贝...</p>
+        		        </div>
+        		        <div class="comments-img">
+        		            <span class="comments-img-first"><img src="../image/museum/comments-img1.jpg"/></span>
+        		            <span><img src="../image/museum/comments-img2.jpg"/></span>
+        		            <span><img src="../image/museum/comments-img3.jpg"/></span>
+        		            <span><img src="../image/museum/comments-img4.jpg"/></span>
+        		            <span><img src="../image/museum/comments-img5.jpg"/></span>       	
+        		        </div>
+        		    </li>
+        		    <li class="comments_item" tapmode onclick="">
+        		        <div class="comments-tag">
+        		            <span class="comments-user">曲冰冰哈</span>
+        		            <span class="comments-time">2014-12-26 13:52</span>
+        		            <span class="comments-star-rank"><img src="../image/museum/rank_star.png"/></span>
+        		        </div>
+        		        <div class="comments-content">
+        		            <p>这个必须去，非常值得，雇导游讲解，每人25，导游人美讲得好，好像那里人总是那么多...</p>
+        		        </div>
+        		    </li>
+        		   
+        	    </ul>
+        	</div>
+        	<div class="comments-button"  tapmode data-frameName="frm_comment_submit" data-title="说两句" data-winName="win_normal" onclick="toPage(this);">
+        	    <a><img src="../image/museum/comments.png"/></a>
+        	</div>
+        	<p style="height:1px;">&nbsp;</p>
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="../script/api.js"></script>
+	<script type="text/javascript" src="../script/common.js"></script>
+	<script type="text/javascript" src="../script/zepto.js"></script>
+	<script type="text/javascript" src="../script/doT.min.js"></script>
+</html>

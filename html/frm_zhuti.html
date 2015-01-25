@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <style>
+        #main{
+            padding: 0.25em;
+            background-color: #f2f2f2;
+            height:auto;
+            
+        }
+        .zhuti-row img{
+            width:100%;
+        }
+        .zhuti-item{
+            width:50%;
+            margin: 10px 0 0;
+        }
+        .zhuti-item-left{
+            float:left;
+        }
+        .zhuti-item-right{
+            float:right;
+        }
+        .zhuti-item img{
+            width:90%;
+            margin:0 auto;
+        }
+        .clearfix:after
+        {
+            content:".";
+            display:block;
+            height:0;
+            clear:both;
+            visibility:hidden;
+        }
+        .clearfix{
+            display:inline-block;
+            overflow:auto; _height:1%;
+        }
+
+    </style>
+</head>
+<body ontouchstart="">
+    <div id="wrap">
+        <div id="main">   
+            <div class="zhuti-row" tapmode data-frameName="frm_lishizhuzhou" data-title="历史主轴" data-winName="win_normal" onclick="toPage(this);">
+                <img src="../image/zhuti/lishizhuzhou.png"/>       
+            </div>
+            <div class="zhuti-row clearfix">
+                <div class="zhuti-item zhuti-item-left" tapmode data-frameName="frm_zhuti" data-title="" data-winName="win_normal" onclick="toPage(this);">
+                    <img src="../image/zhuti/shijianchanglang.png"/>           
+                </div>
+                <div class="zhuti-item zhuti-item-right" tapmode data-frameName="" data-title="周边" data-frameName="win_normal" onclick="toPage(this);">
+                    <img src="../image/zhuti/shikongsuipian.png"/>           
+                </div>
+            </div>
+            <div class="zhuti-row clearfix">
+                <div class="zhuti-item zhuti-item-left" tapmode data-frameName="" data-title="周边" data-frameName="win_normal" onclick="toPage(this);">
+                    <img src="../image/zhuti/bamafangxin.png"/>            
+                </div>
+                <div class="zhuti-item zhuti-item-right" tapmode data-frameName="" data-title="主题" data-frameName="win_normal" onclick="toPage(this);">
+                    <img src="../image/zhuti/faxianfadai.png"/>            
+                </div>
+            </div>  
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/common.js"></script>
+<script type="text/javascript" src="../script/swipe.js"></script>
+</html>

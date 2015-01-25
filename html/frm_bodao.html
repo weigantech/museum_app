@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <style>
+        #wrap{
+            background:url("../image/bodao/bg.png") no-repeat 0 0;
+            background-size:100% 100%;
+        }
+        .bodao-item{
+            width:50%;
+            margin: 20px 0 0;
+        }
+        .bodao-item-left{
+            float:left;
+        }
+        .bodao-item-right{
+            float:right;
+        }
+        .bodao-item img{
+            width:70%;
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body ontouchstart="">
+    <div id="wrap">
+        <div id="main">
+            
+            <div class="bodao">
+                <div class="bodao-row">
+                    <div class="bodao-item bodao-item-left" tapmode data-frameName="frm_zhuti" data-title="主题" data-winName="win_normal" onclick="toPage(this);">
+                       <img src="../image/bodao/zhuti.png">
+                    </div>
+                    <div class="bodao-item bodao-item-right">
+                       <img src="../image/bodao/tansuo.png">
+                    </div>
+                </div>
+                <div class="bodao-row">
+                    <div class="bodao-item bodao-item-left">
+                       <img src="../image/bodao/bocheng.png">
+                    </div>
+                    <div class="bodao-item bodao-item-right">
+                       <img src="../image/bodao/zhoubian.png">
+                    </div>
+                    <div style="clear:both;"></div>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/common.js"></script>
+<script type="text/javascript" src="../script/swipe.js"></script>
+</html>

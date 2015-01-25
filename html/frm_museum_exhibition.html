@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <title>title</title>
+	    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+	    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+	    <style>
+	    	#wrapper
+	    	{
+	    		padding:8px 3px 5px 3px;
+	    	}
+	    	
+	    	.menu_item
+	    	{
+	    		border-bottom: 1px #eee solid;
+	    		color:#75C5F0;
+	    		font-size:1em;
+	    	}
+	    	.exhibition-item{
+	    	    padding-bottom:10px;
+	    	    position:relative;
+	    	    margin-top:10px;
+	    	}
+	    	.exhibition-img{
+	    	    float:left;
+	    	    width:30%;
+	    	    margin-left:2%;
+	    	    
+	    	}
+	    	.exhibition-item img{
+	    	    width:90%;
+	    	}
+	    	.exhibition-info{
+	    	    float:left;
+	    	    width:66%;
+	    	    margin-left:1%;
+	    	    
+	    	}
+	    	.exhibition-title{
+	    	    display:block;
+	    	    font-size:16px;
+	    	    color:#999;
+	    	}
+	    	.exhibition-time{
+	    	    display:block;
+	    	    color:#999;
+	    	    position:absolute;
+	    	    bottom:12px; 
+	    	}
+	    </style>
+	</head>
+	<body>
+		<div id="wrapper">
+		    <ul>
+        		<li class="menu_item">
+        		  <div class="exhibition-item" tapmode data-frameName="frm_exhibition" data-title="展览详情" data-winName="win_normal" onclick="toPage(this);">
+        		      <div class="exhibition-img" tapmode data-frameName="frm_exhibition" data-title="展览详情" data-winName="win_normal" onclick="toPage(this);">
+        		          <img src="../image/museum/exhibition-img1.jpg"/>
+        		      </div>
+        		      <div class="exhibition-info">
+        		          <span class="exhibition-title">骁腾万里-中国古代马文化展</span>
+        		          <span class="exhibition-time">2014-03-25</span>
+        		      </div> 
+        		      <div style="clear:both"></div>    		      
+        		  </div>
+        		</li>
+        		<li class="menu_item" tapmode data-frameName="frm_exhibition" data-title="展览详情" data-winName="win_normal" onclick="toPage(this);">
+        		  <div class="exhibition-item" >
+        		      <div class="exhibition-img">
+        		          <img src="../image/museum/exhibition-img2.jpg"/>
+        		      </div>
+        		      <div class="exhibition-info">
+        		          <span class="exhibition-title">何正璜先生诞辰100周年纪念展</span>
+        		          <span class="exhibition-time">2014-12-23</span>
+        		      </div> 
+        		      <div style="clear:both"></div>    		      
+        		  </div>
+        		</li>
+        		<li class="menu_item" tapmode onclick="">
+        		  <div class="exhibition-item">
+        		      <div class="exhibition-img">
+        		          <img src="../image/museum/exhibition-img3.jpg"/>
+        		      </div>
+        		      <div class="exhibition-info">
+        		          <span class="exhibition-title">净土梵音——山东青州龙兴寺佛教造像展</span>
+        		          <span class="exhibition-time">2014-03-25</span>
+        		      </div> 
+        		      <div style="clear:both"></div>    		      
+        		  </div>
+        		</li>
+        		<li class="menu_item" tapmode onclick="">
+        		  <div class="exhibition-item">
+        		      <div class="exhibition-img">
+        		          <img src="../image/museum/exhibition-img4.jpg"/>
+        		      </div>
+        		      <div class="exhibition-info">
+        		          <span class="exhibition-title">见证辉煌——陕西文物之美摄影展</span>
+        		          <span class="exhibition-time">2014-03-25</span>
+        		      </div> 
+        		      <div style="clear:both"></div>    		      
+        		  </div>
+        		</li>
+        		<li class="menu_item" tapmode onclick="">
+        		  <div class="exhibition-item">
+        		      <div class="exhibition-img">
+        		          <img src="../image/museum/exhibition-img5.jpg"/>
+        		      </div>
+        		      <div class="exhibition-info">
+        		          <span class="exhibition-title">平凡壮举——陕西宝鸡群众保护文物成果特展</span>
+        		          <span class="exhibition-time">2014-03-25</span>
+        		      </div> 
+        		      <div style="clear:both"></div>    		      
+        		  </div>
+        		</li>
+        	</ul>
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="../script/api.js"></script>
+	<script type="text/javascript" src="../script/common.js"></script>
+	<script type="text/javascript" src="../script/zepto.js"></script>
+	<script type="text/javascript" src="../script/doT.min.js"></script>
+</html>

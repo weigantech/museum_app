@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	    <title>title</title>
+	    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+	    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+	    <style>
+	    	#wrapper
+	    	{
+	    		padding:8px 3px 5px 3px;
+	    		justify-content: space-around;
+	    		height:100%;
+	    	}
+	    	#order 
+	    	{
+	    		width:100%;
+	    		height:35px;
+	    		background: url("../image/museum/order.png");
+	    		background-size: 100% 100%; 
+	    	}
+	    	
+	    	table 
+	    	{
+	    		width:100%;
+	    		margin:1em 0;
+	    	}
+	    	table th
+	    	{
+	    		width:25%;
+	    		text-align:center;
+	    	}
+	    	table tr
+	    	{
+	    		/*margin:0.2em 0;*/
+	    		border-right: 1px solid #D0D0D0;
+	    		border-left: 1px solid #D0D0D0;
+	    		height:25px;
+	    	}
+	    	table tr:first-child
+	    	{
+	    		border: 1px solid #D0D0D0;
+	    	}
+	    	
+	    	table tr:last-child
+	    	{
+	    		border-bottom: 1px solid #D0D0D0;
+	    	}
+	    	
+	    	table td
+	    	{
+	    		text-align:center;
+	    	}
+	    	
+	    	
+	    </style>
+	</head>
+	<body>
+		<div id="wrapper" class="display-box box-orient-v">
+			<div id="order" tapmode onclick="">
+			</div>
+			<table id="price" class="box-flex-1">
+				<tr><th></th><th>成人</th><th>老人/儿童</th><th>学生</th></tr>
+				<tr><td>票价</td><td>免票</td><td>免票</td><td>免票</td></tr>
+				<tr><td>备注</td><td colspan="3">馆内可另行租赁讲解器,25元/位</td></tr>
+			</table>
+			
+			<table id="time" class="box-flex-2">
+				<tr>
+					<th></th> <th>开馆时间</th> <th>禁止入馆</th> <th>闭馆时间</th>
+				</tr>
+				<tr>
+					<td>星期一</td> <td colspan="3">闭          馆</td>
+				</tr>
+				<tr>
+					<td>星期二</td><td>09:00</td><td>16:30</td><td>17:00</td>
+				</tr>
+				<tr>
+					<td>星期三</td><td>09:00</td><td>16:30</td><td>17:00</td>
+				</tr>
+				<tr>
+					<td>星期四</td><td>09:00</td><td>16:30</td><td>17:00</td>
+				</tr>
+				<tr>
+					<td>星期五</td><td>09:00</td><td>16:30</td><td>17:00</td>
+				</tr>
+				<tr>
+					<td>星期六</td><td>09:00</td><td>16:30</td><td>17:00</td>
+				</tr>
+				<tr>
+					<td>星期日</td><td>09:00</td><td>16:30</td><td>17:00</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+	<script type="text/javascript" src="../script/api.js"></script>
+	<script type="text/javascript" src="../script/common.js"></script>
+	<script type="text/javascript" src="../script/zepto.js"></script>
+	<script type="text/javascript" src="../script/doT.min.js"></script>
+	<script id="museum_ticket_tmpl" type="text/x-dot-template">
+			
+	</script>
+	<script type="text/javascript">
+	
+		
+		apiready = function(){
+			
+			var id = api.pageParam.id;
+			var url = config["serverUrl"] + "/museum/" + id + "/info";
+			$.getJSON( url, function(res){
+				var errcode = res["errcode"];
+				
+				if ( errcode == 0)
+				{		
+					var data = res["data"];
+					var pagefn = doT.template(document.getElementById('museum_ticket_tmpl').text, undefined, undefined);
+					//$('#wrapper').append( pagefn( data));
+				}
+			});
+		};
+	</script>
+</html>

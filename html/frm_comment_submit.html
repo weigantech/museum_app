@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <style>
+       #wrap{
+           padding:5px;
+       }
+       .comment-header{
+          background-color:#00cc99;
+       }
+       .comment-header-info{
+           float:left;
+           margin-left:10px;
+       }
+       .comment-header img{
+           display:block;
+           width:100px;
+           float:left;
+       }
+       .comment-header span{
+           display:block;
+           color:#fff;
+           font-weight:bold;
+           height:50px;
+           position:relative;
+           min-width:200px;
+           
+       }
+       .comment-title{
+           position:relative;
+       }
+       .comment-title p{
+           position:absolute;
+           bottom:0px;
+           display:block;
+           font-size:24px;
+           color:#fff;
+           
+       }
+       .comment-rank img{
+           height:40px;
+           display:block;
+           float:left;
+       }
+       .comment-rank label{
+           font-weight:bold;
+           line-height:40px;
+           float:left;
+       }
+       .comment-inputarea{
+           border-top:1px solid #eee;
+           border-bottom:1px solid #eee;
+       }
+       .comment-inputarea label{
+           display:block;
+           text-align:right;
+           font-size:14px;
+           line-height:28px;
+           color:#aaa;
+       }
+       #comment{
+           width:100%;
+           padding:5px;
+       }
+       .comment-upload-img{
+           margin-top:10px;
+       }
+       .comment-upload-img img{
+           width:60px;
+           float:left;
+       }
+       .comment-upload-img span{
+           display:block;
+           float:left;
+           line-height:60px;
+           margin-left:10px;
+           font-weight:bold;
+           color:#aaa;
+       }
+       .comment-submit{
+           text-align:center;
+           margin-top:20px;
+       }
+    </style>
+</head>
+<body ontouchstart="">
+    <div id="wrap">
+        <div class="comment-header">
+            <img src="../image/comment/sxhm.jpg">
+            <div class="comment-header-info">
+                <span class="comment-title"><p>陕西历史博物馆</p></span>
+                <span class="comment-website">http://www.sxhm.com/</span>
+                <div style="clear:both"></div>
+            </div>
+            
+        </div>
+        <form>
+            <p class="comment-rank">
+                <label>选择评分：</label>
+                <img src="../image/comment/rank.png"/>
+                <div style="clear:both"></div>
+            </p>
+            <p class="comment-inputarea">
+                <textarea name="comment" id="comment" cols="100%" rows="6" tabindex="4" wrap="hard" placeholder="评论超过100字可领取额外5积分呦~~"></textarea>
+                <label>最少输入10个字，还可以输入1000字</label>
+            </p>
+            <p class="comment-upload-img">
+                 <img src="../image/comment/imgupload.png"/>
+                 <span>添加图片，轻松领取额外5积分</span>
+                 <div style="clear:both"></div>
+            </p>
+            <p class="comment-submit">
+                <input type="image" height=80 width=80 src="../image/comment/submit.png" align=absMiddle border=0 name=RedImg onclick="this.form.submit()">
+            </p>
+        </form>
+        <div style="clear:both"></div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/common.js"></script>
+<script type="text/javascript" src="../script/swipe.js"></script>
+</html>

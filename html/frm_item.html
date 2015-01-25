@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <style>
+       #wrap{
+           padding:5px;
+       }
+       .swipe {
+           overflow: hidden;
+           visibility: hidden;
+           position: relative;
+           margin-bottom:10px;
+       }
+       .swipe-wrap {
+           overflow: hidden;
+           position: relative;
+       }
+       .swipe-wrap > div {
+           float:left;
+           width:100%;
+           position: relative;
+       }
+       .exhi-header{
+           border-bottom:1px solid #eee;
+           padding:0 5px;
+       }
+       .exhi-title{
+           display:block;
+           font-size:22px;
+           font-weight:bold;
+       }
+       .exhi-tags{
+           display:block;
+           margin:10px 0;
+          
+       }
+       .exhi-tags span{
+        
+           color:#999;
+            line-height:26px;
+       }
+       .exhi-view{
+           float:right;
+           padding-left:28px;
+           
+           background:url(../image/museum/collect.png) no-repeat 0 0;
+           background-size:auto 100%;
+       }
+       .exhi-collect{
+           float:right;
+           margin-left:10px;
+           padding-left:28px;
+           background:url(../image/museum/favour.png) no-repeat 0 0;
+           background-size:auto 100%;
+          
+       }
+       .exhi-content{
+           padding:5px 0 60px;
+           color:#ddd;
+       }
+       .exhi-content img{
+           width:100%;
+           margin:5px 0;
+       }
+       .item-intro{
+           border-bottom:1px solid #eee;
+           margin-bottom:5px;
+           padding-bottom:5px;
+       }
+       .item-intro p{
+            line-height:28px;
+       }
+       .item-details p{
+           margin:5px 0;
+           text-indent:2em;
+           line-height:24px;
+       }
+       span.item-name{
+           font-weight:bold;
+           color:#333;
+       }
+    </style>
+</head>
+<body ontouchstart="">
+    <div id="wrap">
+        <div id='slider' class='swipe'>
+            <div class='swipe-wrap'>
+                <div>
+                    <img src="../image/item/item_img1.jpg">
+                </div>
+                <div>
+                    <img src="../image/item/item_img2.jpg">
+                </div>
+                <div>
+                    <img src="../image/item/item_img3.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="exhi-header">
+            <span class="exhi-tags">
+                <span class="item-name">&bull; 秦杜虎符</span>
+                <span class="exhi-collect">300</span>
+                <span class="exhi-view">285</span>
+            </span>
+        </div>
+        <div style="clear:both"></ div>
+        <div class="exhi-content">
+            <div class="item-intro">
+                <p>所属年代：战国</p>
+                <p>类别：器物</p>
+                <p>尺寸：高4.4厘米、长9.5厘米、厚0.7厘米</p>
+                <p>出土时间地点：1973年西安南郊杜城附近</p>
+            </div>
+            <div class="item-details">
+                <p>“符”是中国古代常用的一种信物，一般分为两半，两半相合，就能作为办理某类事务的定约和践约的凭证。现代汉语中，“符合”一词及来源于此。中国古代兵符多制成虎形。1973年，西安南郊杜城村附近一位农民犁地时发现了一枚形似虎的秦国兵符。</p>
+                <p>虎符“右在君，左在杜”，字体为小篆，内容大意是：右半符掌握在国君手中，左半符在杜地军事长官手中，凡要调动50人以上的带甲兵士，杜地的左符就要与君王的右符相合，才能行动。但遇上烽火报警的紧急情况，不必会君王的右符。铭文反映出秦以“右”为尊，秦国的军权高度集中，凡征调50人以上的兵士必须经国君认可。</p>
+                <p>虎符作为中国历史上调兵遣将的凭证起源很早，信陵君“窃符救赵”的故事说明至少在战国时期虎符已经行用。而且从记载可知战国时期各国君主为把持军权都实行了类似的制度。</p>
+            </div>
+        <div style="clear:both"></ div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/common.js"></script>
+<script type="text/javascript" src="../script/swipe.js"></script>
+<script type="text/javascript">
+    apiready = function(){
+        var aLi = $api.domAll('#title-box-ul li');
+        window.mySwipe = Swipe($api.byId('slider'),{
+            auto: 2000,
+            continuous: true
+        });
+    };   
+</script>
+</html>
